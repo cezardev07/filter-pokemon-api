@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Site criado para estduo, consumido api http e filtrando elemtos com input alem de fazer uma lista de pokemons">
+    <title>Buscar pokeapi</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+
+    <!-- Desenvolvedor Cezar Pereira -->
+    
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Buscar pokemon">
+            <button id="theme">
+                <ion-icon name="invert-mode-sharp"></ion-icon>
+            </button>
+        </div>
+    </header>
+    <main class="listener-pokemon">
+        <article class="card">
+            <div class="header-card">
+                <p>ice</p>
+                <p>XP 61</p>
+            </div>
+            <div class="main-card">   
+                <img class="img-principal" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/582.svg" alt="">
+            </div>
+            <div class="footer-card">
+                <h2>vanillite</h2>
+                <img class="img-gif" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/582.gif" alt="">
+            </div>
+        </article>
+    </main>
+    <div class="arrow-top">
+        <a href="#">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="cookie">
+        <p>cookie</p>
+        <div class="cont-btn-cookie">
+            <button id="btn-cookie">Aceitar</button>
+        </div>
+    </div>
+    <footer>
+        <a href="https://github.com/cezardev07" target="_blank" rel="noopener noreferrer">
+            GITHUB <ion-icon name="logo-github"></ion-icon>
+        </a>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
 </body>
 </html>
