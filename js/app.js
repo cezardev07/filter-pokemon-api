@@ -8,7 +8,7 @@ let count = 400
 // 400 foi o numero maximo de pokemons que eu consegui filtrar com a api estavel.
 //acima de 400 a api já fica instavel e acaba nao mostrando todos os pokemons que a doc disponibiliza!
 
-// mas se você quiser pode altera esse valor talvex rode melhor na sua maquina do que na minha! 😉❤️
+// mas se você quiser pode alterar esse valor, talvez rode melhor na sua maquina do que na minha! 😉❤️
 
 const get_api = async function(pokemon){
     const api_response = await fetch(url + pokemon)
