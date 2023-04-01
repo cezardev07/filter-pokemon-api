@@ -1,12 +1,17 @@
 console.log("Hey Dev!")
 const main = document.querySelector(".listener-pokemon")
+const count_pokemon = document.querySelector(".count-pokemon")
 //console.log(card)
+// console.log(count_pokemon)
 
 const url = "https://pokeapi.co/api/v2/pokemon/"
-let count = 400 
+let count = 649 
 
-// 400 foi o numero maximo de pokemons que eu consegui filtrar com a api estavel.
-//acima de 400 a api já fica instavel e acaba nao mostrando todos os pokemons que a doc disponibiliza!
+// 649 foi o numero maximo de pokemons que eu consegui filtrar com a api estavel.
+// caso você esteja com a internet lenta recomendo abaixa o count, no maximo 400, mas mesmo assim talvez demore para filtrar todos os pokemons
+
+// acima de 649 a api já fica instavel e acaba nao mostrando todos os pokemons que a doc disponibiliza!
+// as vezes até mostrar mas alguns não tem imagens e gif ou não retorna nada, e acaba embaralhando o contador e não conseguindo filtrar todos os pokemons
 
 // mas se você quiser pode alterar esse valor, talvez rode melhor na sua maquina do que na minha! 😉❤️
 
@@ -79,8 +84,18 @@ const user_api = async function(){
             ["animated"]
             ["front_default"]
 
+            count_pokemon.innerHTML = `${i} </br> pokémon`
+
         }
+        const cardLength = document.querySelectorAll(".card")
+        const circleLoader = document.querySelector(".circle-loader")
         
+        if(cardLength.length >= count){
+
+            circleLoader.remove()
+        
+        }
+
         const inp = document.querySelector("input")
         inp.oninput = busca;
 
@@ -184,8 +199,8 @@ const user_api = async function(){
             }
         )
     }
-    catch{
-        console.log("not default")
+    catch (error){
+        console.log(`${error}`)
     }
 }
 
@@ -205,6 +220,15 @@ function theme(){
     header.classList.toggle("darck-header")
     i.classList.toggle("darck-btn")
     github.classList.toggle("gt-darck")
+}
+
+const closeCountPokemon = document.querySelector(".count-pokemon")
+closeCountPokemon.ondblclick = closePokemon;
+
+function closePokemon(){
+
+    closeCountPokemon.remove()
+
 }
 
 const btnCookie = document.querySelector("#btn-cookie")
