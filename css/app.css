@@ -193,6 +193,34 @@ footer a{
 .cookie button:hover{
     background: rgb(47, 106, 170);
 }
+.circle-loader{
+    position: fixed;
+    z-index: 30000;
+    top: 0;bottom: 0;left: 0;right: 0;
+    width: 60px; height: 60px;
+    margin: auto;
+    border: solid 10px rgba(0, 106, 255, 0.518);
+    border-radius: 50%;
+    border-top-color: rgb(255, 230, 0);
+    animation: rotateSpine .3s linear infinite;
+}
+.count-pokemon{
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    background: #ef5350;
+    border: solid 5px #fff;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    animation: op 1.8s ease;
+}
+.count-pokemon:active{
+    scale: .8;
+}
 @media (max-width:470px){
     header img{
         width: 100px;
@@ -201,4 +229,6 @@ footer a{
         margin-top: 140px;
     }
 }
-@keyframes op{0%{opacity: -1;}100%{opacity: 1;}}
+@keyframes op{ 0% { opacity: -1; } 100% { opacity: 1; } }
+
+@keyframes rotateSpine { 100% { rotate: 360deg; } }
