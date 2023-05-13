@@ -210,7 +210,7 @@ footer a{
     border: solid 4px rgba(0, 106, 255, 0.518);
     border-radius: 50%;
     border-top-color: rgb(255, 230, 0);
-    animation: rotateSpine .5s linear infinite;
+    animation: rotateSpine .3s linear infinite;
 }
 .count-pokemon{
     position: fixed;
