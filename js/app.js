@@ -84,7 +84,7 @@ const user_api = async function(){
             ["animated"]
             ["front_default"]
 
-            count_pokemon.innerHTML = `${i} </br> pokémon`
+            count_pokemon.innerHTML = `${i} | ${count} </br> pokémon`
 
         }
         const cardLength = document.querySelectorAll(".card")
