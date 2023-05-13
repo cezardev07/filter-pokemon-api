@@ -196,18 +196,27 @@ footer a{
 .circle-loader{
     position: fixed;
     z-index: 30000;
-    top: 0;bottom: 0;left: 0;right: 0;
-    width: 60px; height: 60px;
+    /* Loading spinner <=> position CENTER 
+        top: 0;bottom: 0;left: 0;right: 0;
+        width: 60px; height: 60px; 
+    Loading spinner <=> position CENTER */
+
+    /* Loading spinner <=> position RIGHT and TOP */
+        top: 235px; right: 47px;    
+        width: 20px; height: 20px;
+    /* Loading spinner <=> position RIGHT and TOP */
+
     margin: auto;
-    border: solid 10px rgba(0, 106, 255, 0.518);
+    border: solid 4px rgba(0, 106, 255, 0.518);
     border-radius: 50%;
     border-top-color: rgb(255, 230, 0);
-    animation: rotateSpine .3s linear infinite;
+    animation: rotateSpine .5s linear infinite;
 }
 .count-pokemon{
     position: fixed;
     top: 160px;
     right: 10px;
+    width: 95px;
     color: white;
     z-index: 9999;
     text-align: center;
